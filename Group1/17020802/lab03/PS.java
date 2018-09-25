@@ -28,6 +28,14 @@ public class PS extends C1 {
 		int ucMax = uocchungMax(this.tu, this.mau);
 		this.tu = this.tu / ucMax;
 		this.mau = this.mau / ucMax;
+		if (this.tu < 0 & this.mau < 0){
+			this.tu = -this.tu;
+			this.mau = -this.mau;
+		}
+		if (this.tu > 0 & this.mau < 0){
+			this.tu = -this.tu;
+			this.mau = -this.mau;
+		}
 	}
 	// cong phan so
 	public void addPs(PS a, PS b) {
